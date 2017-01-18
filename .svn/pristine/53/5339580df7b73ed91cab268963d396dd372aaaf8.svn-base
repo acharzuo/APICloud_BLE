@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>端API</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+     <script type="text/javascript" src="../script/api.js"></script>   
+     <style>
+        .empty{ text-align: center; padding: 120px 0; }
+    </style>
+</head>
+<body>
+    <div class="empty">BlueTouch BLE 测试</div>
+   
+
+    <script>
+ 
+//  var ble = api.require('ble');
+//	ble.initManager(function(ret) {
+//  if (ret.state == "poweredOn") {
+//      api.alert({ msg: "初始化成功" });
+//  }
+//});
+
+    window.apiready = function() { 
+		var bluetooth = api.require("bluetooth");
+		bluetooth.connect(
+		    function(ret,err){
+		        if(ret.message){
+		            api.alert({
+		                title: "蓝牙传输",
+		                msg: ret.message
+		            });
+		        }
+		
+		        if(ret.progress){
+		            api.toast({
+		                msg: "传输进度: " + ret.progress ,
+		                duration: 1000,
+		                location: "top"
+		            });
+		        }
+		    }
+		);
+
+}
+    
+    </script>
+</body>
+</html>

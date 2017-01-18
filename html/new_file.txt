@@ -1,0 +1,7 @@
+ret:{"peripherals":[
+{"uuid":"CD60B3F9-5F5D-E805-2FDA-A8EA3848FD99","name":"BLE SPS","rssi":-75},
+{"uuid":"BD971999-53A4-7827-CC47-6E36E36F7C1F","name":"My Mambo","rssi":-79}]}
+
+
+
+ret:{"status":true,"services":["FEE0","180A"]}
